@@ -148,6 +148,12 @@ static const Rule rules[] = {
     RULE(.wintype = WTYPE "_NET_WM_WINDOW_TYPE_NORMAL", .isfloating = 1)
 	RULE(.title = "GNU Image Manipulation Program", .tags = 1 << 4)
     RULE(.class = "org.wezfurlong.wezterm", .tags = 1 << 1)
+    RULE(.class = "discord", .tags = 1 << 2)
+    RULE(.class = "Steam", .tags = 1 << 3)
+    RULE(.class = "PolyMC", .tags = 1 << 3)
+    RULE(.class = "Brave-browser", .tags = 1 << 0)
+    RULE(.class = "Minecraft 1.8.9", .tags = 1 << 3, .monitor = 0)
+    RULE(.class = "firefox", .tags = 1 << 0)
 };
 
 
@@ -167,7 +173,7 @@ static const Rule rules[] = {
 static const BarRule barrules[] = {
 	/* monitor   bar    alignment         widthfunc                drawfunc                clickfunc                name */
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_tags,              draw_tags,              click_tags,              "tags" },
-	{  0,        0,     BAR_ALIGN_RIGHT,  width_systray,           draw_systray,           click_systray,           "systray" },
+	{  1,        0,     BAR_ALIGN_RIGHT,  width_systray,           draw_systray,           click_systray,           "systray" },
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_ltsymbol,          draw_ltsymbol,          click_ltsymbol,          "layout" },
 	{ statusmon, 0,     BAR_ALIGN_RIGHT,  width_status2d,          draw_status2d,          click_status2d,          "status2d" },
 	{ -1,        0,     BAR_ALIGN_NONE,   width_wintitle,          draw_wintitle,          click_wintitle,          "wintitle" },
