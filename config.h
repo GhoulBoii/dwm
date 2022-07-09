@@ -92,6 +92,7 @@ static const Rule rules[] = {
     RULE(.wintype = WTYPE "_NET_WM_WINDOW_TYPE_NORMAL", .isfloating = 1)
 	RULE(.title = "GNU Image Manipulation Program", .tags = 1 << 4)
     RULE(.class = "org.wezfurlong.wezterm", .tags = 1 << 1)
+    RULE(.class = "St", .tags = 1 << 1)
     RULE(.class = "discord", .tags = 1 << 2)
     RULE(.class = "Steam", .tags = 1 << 3)
     RULE(.class = "PolyMC", .tags = 1 << 3)
@@ -145,7 +146,7 @@ static const char *roficmd[] = {
     "combi",
 	NULL
 };
-static const char *termcmd[]  = { "wezterm", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 
 static const char* firefoxcmd[] = {"org.mozilla.firefox", NULL};
